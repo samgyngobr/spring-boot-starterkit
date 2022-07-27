@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://localhost:8080/" >
+<head th:insert="web/fragments/header.html"></head>
+<body>
+
+<nav th:insert="web/fragments/nav.html" th:remove="tag" ></nav>
+
+<main role="main">
+
+    <section class="py-5 text-center container">
+        <table class="table">
+            <th:block th:each="user : ${users}">
+                <tr>
+                    <td th:text="${user.name}">...</td>
+                    <td th:text="${user.email}">...</td>
+                    <td th:text="${user.created_at}">...</td>
+                </tr>
+            </th:block>
+        </table>
+    </section>
+
+</main>
+
+<div th:insert="web/fragments/footer.html" th:remove="tag"></div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://localhost:8080/" >
+<head th:insert="web/fragments/header.html"></head>
+<body>
+
+<nav th:insert="web/fragments/nav.html" th:remove="tag" ></nav>
+
+<main role="main">
+
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+
+                <h1 class="fw-light" th:text="${code}" ></h1>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<div th:insert="web/fragments/footer.html" th:remove="tag"></div>
+
+</body>
+</html>
